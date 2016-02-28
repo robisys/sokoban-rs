@@ -1,0 +1,4 @@
+wget http://www.sourcecode.se/sokoban/download/microban.slc
+
+
+#./target/release/sokoban-rs /path/to/microban.slc
