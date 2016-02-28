@@ -1,0 +1,2713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { (function(){function c(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var h=a?new c(a.responseStart):new c;window.jstiming={Timer:c,load:h};if(a){var b=a.navigationStart,e=a.responseStart;0<b&&e>=b&&(window.jstiming.srt=e-b)}if(a){var d=window.jstiming.load;0<b&&e>=b&&(d.tick("_wtsrt",void 0,b),d.tick("wtsrt_",
+"_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&0<b&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,d&&0<b&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(k){}})();window.tickAboveFold=function(c){var a=0;if(c.offsetParent){do a+=c.offsetTop;while(c=c.offsetParent)}c=a;750>=c&&window.jstiming.load.tick("aft")};var f=!1;function g(){f||(f=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",g,!1):window.attachEvent("onscroll",g);
+ })();</script>
+<meta content='blogger' name='generator'/>
+<link href='http://www.lostgarden.com/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Lost Garden - Atom" href="http://www.lostgarden.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Lost Garden - RSS" href="http://www.lostgarden.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Lost Garden - Atom" href="https://www.blogger.com/feeds/11719805/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="Lost Garden - Atom" href="http://www.lostgarden.com/feeds/4097888096877574222/comments/default" />
+<link href='http://lostgarden.com/uploaded_images/BlockRPGMockup-772325.jpg' rel='image_src'/>
+<link href='https://plus.google.com/105363132599081141035' rel='publisher'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Lost Garden: Danc's Miraculously Flexible Game Prototyping Tiles</title>
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/static/v1/widgets/1708208307-widget_css_bundle.css' />
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=11719805&zx=98f61e25-6ab6-4315-a481-7feadd75ecac' />
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     2Plus
+Designers: Dante Araujo & Klodian
+URL:      www.dantearaujo.net / www.deluxetemplates.net
+Date:     May 2009
+----------------------------------------------- */
+#navbar-iframe {
+display: none !important;
+}
+/* Variable definitions
+====================
+<Variable name="bgcolor" description="Page Background Color"
+type="color" default="#fff">
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#58a">
+<Variable name="pagetitlecolor" description="Blog Title Color"
+type="color" default="#fff">
+<Variable name="descriptioncolor" description="Blog Description Color"
+type="color" default="#999">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#c60">
+<Variable name="bordercolor" description="Border Color"
+type="color" default="#ccc">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#999">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#666">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999">
+<Variable name="bodyfont" description="Text Font"
+type="font" default="normal normal 100% Georgia, Serif">
+<Variable name="headerfont" description="Sidebar Title Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif">
+<Variable name="pagetitlefont" description="Blog Title Font"
+type="font"
+default="normal normal 200% Georgia, Serif">
+<Variable name="descriptionfont" description="Blog Description Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="postfooterfont" description="Post Footer Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="startSide" description="Side where text starts in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="Side where text ends in blog language"
+type="automatic" default="right">
+*/
+/* Use this with templates/template-twocol.html */
+body {
+background:white url(http://2.bp.blogspot.com/_66wIGDjagHk/SgXijc91g7I/AAAAAAAAAVQ/2UjoynG3wxs/s1600/background.png) repeat-y scroll 0 0;
+color:#333333;
+font-family:arial;
+font-size:small;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+text-align:center;
+}
+a {
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+}
+a:link {
+color:#B44000;
+text-decoration:none;
+}
+a:visited {
+color:#CC0000;
+text-decoration:none;
+}
+a:hover {
+color:#CC0000;
+text-decoration:none;
+}
+a img {
+border-width:0;
+}
+#header-wrapper {
+left:5px;
+position:relative;
+top:-15px;
+width:286px;
+}
+#header-inner {
+background-position:center center;
+margin-left:auto;
+margin-right:auto;
+}
+#header {
+color:white;
+margin:5px;
+text-align:left;
+}
+#header h1 {
+color:#FFFFFF;
+display:block;
+font-family:arial;
+font-size:67px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+letter-spacing:-4px;
+line-height:normal;
+margin-bottom:0;
+margin-top:45px;
+}
+#header a {
+color:white;
+text-decoration:none;
+}
+#header a:hover {
+color:white;
+}
+#header .description {
+color:white;
+font-family:arial;
+font-size:15px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:-5px 0 0;
+}
+#header img {
+margin-left:auto;
+margin-right:auto;
+}
+#outer-wrapper {
+float:left;
+font-family:arial;
+font-size:100%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0 auto;
+position:relative;
+text-align:left;
+width:940px;
+}
+#main-wrapper {
+float:right;
+margin-top:-180px;
+overflow:hidden;
+width:580px;
+}
+#sidebar-wrapper {
+float:left;
+margin-left:30px;
+margin-top:-10px;
+overflow:hidden;
+width:270px;
+}
+h2 {
+color:#999999;
+font-family:'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+font-size:78%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+letter-spacing:0.2em;
+line-height:1.4em;
+margin:1.5em 0 0.75em;
+text-transform:uppercase;
+}
+h2.date-header {
+margin:1.5em 0 0.5em;
+}
+.post {
+border-bottom:1px solid #CCCCCC;
+margin:0.5em 0 1.5em;
+padding-bottom:1.5em;
+}
+.post h3 {
+color:#B44000;
+font-size:22px;
+font-weight:bold;
+line-height:1.4em;
+margin:0.25em 0 0;
+padding-top:10px;
+}
+.post h3 a, .post h3 a:visited, .post h3 strong {
+color:#000000;
+display:block;
+font-weight:bold;
+text-decoration:none;
+}
+.post h3 strong, .post h3 a:hover {
+color:#B44000;
+}
+.post-body {
+color:#333333;
+font-size:13px;
+line-height:18px;
+margin:0 0 0.75em;
+}
+.post-body blockquote {
+line-height:1.3em;
+}
+.post blockquote {
+background:#EEEEEE none repeat scroll 0 0;
+font-family:georgia;
+font-style:italic;
+margin:1em 20px;
+padding:10px;
+}
+.post-footer {
+color:#999999;
+font-family:arial;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+margin-bottom:10px;
+margin-top:5px;
+text-transform:none;
+}
+.comment-link {
+margin-left:2px;
+margin-right:2px;
+}
+.post img {
+border:1px solid #CCCCCC;
+padding:2px;
+}
+.post blockquote {
+margin:1em 20px;
+}
+.post blockquote p {
+margin:0.75em 0;
+}
+.comment-author {}
+#comments h4 {
+color:#666666;
+font-weight:bold;
+letter-spacing:0.2em;
+line-height:1.4em;
+margin:1em 0;
+text-transform:none;
+}
+#comments-block {
+line-height:1.6em;
+margin:1em 0 1.5em;
+}
+#comments-block .comment-author {
+background:#EEEEEE none repeat scroll 0 0;
+border:1px solid #EEEEEE;
+font-size:15px;
+font-weight:bold;
+margin-right:20px;
+padding:5px;
+}
+#comments .blogger-comment-icon, .blogger-comment-icon {
+background:#EEEEEE none repeat scroll 0 0;
+border-color:#CCCCCC #CCCCCC #EEEEEE;
+border-style:solid;
+border-width:2px 1px 1px;
+line-height:16px;
+padding:5px;
+}
+#comments-block .comment-body {
+border-left:1px solid #EEEEEE;
+border-right:1px solid #EEEEEE;
+margin-left:0;
+margin-right:20px;
+padding:7px;
+}
+#comments-block .comment-footer {
+border-bottom:1px solid #EEEEEE;
+border-left:1px solid #EEEEEE;
+border-right:1px solid #EEEEEE;
+font-size:11px;
+line-height:1.4em;
+margin:-0.25em 20px 2em 0;
+padding:5px;
+text-transform:none;
+}
+#comments-block .comment-body p {
+margin:0 0 0.75em;
+}
+.deleted-comment {
+color:gray;
+font-style:italic;
+}
+#blog-pager-newer-link {
+float:left;
+}
+#blog-pager-older-link {
+float:right;
+}
+#blog-pager {
+text-align:center;
+}
+.feed-links {
+clear:both;
+line-height:2.5em;
+}
+.sidebar {
+color:#999999;
+font-size:14px;
+line-height:1.5em;
+}
+.sidebar h2 {
+color:white;
+font-family:arial;
+font-size:21px;
+font-weight:bold;
+letter-spacing:0;
+margin-bottom:5px;
+text-transform:none;
+}
+.sidebar a {
+color:#999999;
+}
+.sidebar a:hover {
+color:white;
+}
+.sidebar ul {
+font-family:arial;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+.sidebar li {
+line-height:1.2em;
+margin:0;
+padding:0 0 0.25em 20px;
+text-indent:-15px;
+}
+.sidebar .widget, .main .widget {
+border-bottom:1px solid #666666;
+margin:0 0 1.5em;
+padding:0 0 1.5em;
+}
+.main .Blog {
+border-bottom-width:0;
+}
+.profile-img {
+border:1px solid #CCCCCC;
+float:left;
+margin:0 5px 5px 0;
+padding:4px;
+}
+.profile-data {
+color:#999999;
+font-family:'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+font-size:78%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+letter-spacing:0.1em;
+line-height:1.6em;
+margin:0;
+text-transform:uppercase;
+}
+.profile-datablock {
+margin:0.5em 0;
+}
+.profile-textblock {
+line-height:1.6em;
+margin:0.5em 0;
+}
+.profile-link {
+font-family:'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+font-size:78%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+letter-spacing:0.1em;
+line-height:normal;
+text-transform:uppercase;
+}
+#navigation {
+background:#F2F2F1 none repeat scroll 0 0;
+height:35px;
+line-height:35px;
+margin-left:335px;
+text-align:left;
+}
+.navigation {
+margin:0;
+padding:0;
+}
+.homebtn {
+display:inline;
+}
+.navitem {
+display:inline;
+}
+.homebtn a {
+background:#B44000 none repeat scroll 0 0;
+color:#F2F2F1;
+font-family:arial;
+font-size:12px;
+font-weight:bold;
+letter-spacing:0;
+padding:11px 50px 9px;
+}
+.homebtn a:hover {
+background:#B44000 none repeat scroll 0 0;
+color:#F2F2F1;
+text-decoration:none;
+}
+.navitem a {
+color:#191919;
+font-family:arial;
+font-size:12px;
+font-weight:bold;
+letter-spacing:0;
+padding:11px 30px 9px;
+}
+.navitem a:hover {
+background:#B44000 none repeat scroll 0 0;
+color:#F2F2F1;
+text-decoration:none;
+}
+#search-wrapper {
+margin-left:30px;
+margin-top:0px;
+width:300px;
+}
+#search input {
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+}
+#search {
+margin:0;
+padding:0;
+position:relative;
+}
+#search-box {
+background:#4B4B4B none repeat scroll 0 0;
+border:medium none;
+color:#939393;
+display:block;
+height:22px;
+padding:6px 10px 5px;
+width:246px;
+}
+#search-button {
+background:transparent url() no-repeat scroll 0 0;
+border:medium none;
+display:block;
+height:35px;
+left:256px;
+margin:0;
+position:absolute;
+top:13px;
+width:39px;
+}
+#search-button:hover {
+background:transparent url() no-repeat scroll 0 0;
+}
+#footer-wrapper {
+background:#F2F2F1 none repeat scroll 0 0;
+clear:both;
+height:35px;
+line-height:35px;
+margin-left:335px;
+padding-left:20px;
+text-align:left;
+}
+
+--></style>
+<link href='http://lunar.lostgarden.com/favicon.ico' rel='shortcut icon'/>
+<link href='http://lunar.lostgarden.com/favicon.ico' rel='icon'/>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+          if (gapi.iframes && gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: 'https://www.blogger.com/navbar.g?targetBlogID\07511719805\46blogName\75Lost+Garden\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75BLUE\46layoutType\75LAYOUTS\46searchRoot\75http://www.lostgarden.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://www.lostgarden.com/\46targetPostID\0754097888096877574222\46blogPostOrPageUrl\75http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html\46vt\0753523404733029277613',
+                where: document.getElementById("navbar-iframe-container"),
+                id: "navbar-iframe"
+            });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<div id='navigation'>
+<ul class='navigation'>
+<li class='homebtn'><a Title='Home' href='http://www.lostgarden.com/'>Home</a></li>
+<li class='navitem'><a Title='About' href='http://www.lostgarden.com/p/about.html'>About</a></li>
+<li class='navitem'><a Title='Essays' href='http://www.lostgarden.com/2008/07/directory-of-posts.html'>Essays</a></li>
+<li class='navitem'><a Title='Art' href='http://www.lostgarden.com/search/label/free%20game%20graphics'>Art</a></li>
+<li class='navitem'><a Title='Contact' href='http://www.lostgarden.com/p/contact.html'>Contact</a></li>
+</ul>
+</div>
+<div id='outer-wrapper'><div id='wrap2'>
+<!-- skip links for text browsers -->
+<span id='skiplinks' style='display:none;'>
+<a href='#main'>skip to main </a> |
+      <a href='#sidebar'>skip to sidebar</a>
+</span>
+<div id='header-wrapper'>
+<div class='header section' id='header'><div class='widget Header' id='Header1'>
+<div id='header-inner'>
+<a href='http://www.lostgarden.com/' style='display: block'>
+<img alt='Lost Garden' height='142px; ' id='Header1_headerimg' src='http://4.bp.blogspot.com/_VzXlmJG8Y3Q/S-YAdsH9uKI/AAAAAAAAAKs/LV9mEEzvZkI/S1600-R/lostgarden-logo-02.png' style='display: block' width='303px; '/>
+</a>
+</div>
+</div></div>
+</div>
+<div id='search-wrapper'>
+<p align='center'><form action='/search' id='search' method='get' style='display:inline;'>
+<input id='search-box' name='q' size='25' type='text' value='Type your search and hit enter'/></form></p>
+</div>
+<div id='content-wrapper'>
+<div id='crosscol-wrapper' style='text-align:center'>
+<div class='crosscol section' id='crosscol'></div>
+</div>
+<div id='main-wrapper'>
+<div class='main section' id='main'><div class='widget Blog' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+<h2 class='date-header'><span>Saturday, May 12, 2007</span></h2>
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry'>
+<a name='4097888096877574222'></a>
+<h3 class='post-title entry-title'>
+<a href='http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html'>Danc's Miraculously Flexible Game Prototyping Tiles</a>
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content'>
+<div style="text-align: center;"><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://lostgarden.com/uploaded_images/BlockRPGMockup-772331.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://lostgarden.com/uploaded_images/BlockRPGMockup-772325.jpg" alt="" border="0" /></a><span style="font-style: italic; color: rgb(102, 102, 102);font-family:arial;" >RPGs love PlanetCute</span><br /></div><div style="text-align: center;"><span style="font-style: italic; color: rgb(102, 102, 102);font-family:arial;" ><br /></span></div><div style="text-align: center;"><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://lostgarden.com/uploaded_images/BlockPlatformMockup-728456.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://lostgarden.com/uploaded_images/BlockPlatformMockup-728453.jpg" alt="" border="0" /></a><span style="font-style: italic; color: rgb(102, 102, 102);font-family:arial;" >So do platformers... </span><br /></div><br />One of the commenters on the SpaceCute posts wondered what would happen if you visited one of those delightful spa-like planetoids that decorate our little galaxy of cuteness.   Well, now you know.  Here is a new set of graphics I'm dubbing "PlanetCute"<br /><br />These are Lowest Common Denominator graphics.  I put the challenge to myself: "What is a graphical style that is attractive, but are useful to both the widest range of developers and game genres?"  Here's what I came up with for an answer.<br /><span class="fullpost"><br /><span style=";font-family:arial;font-size:130%;"  ><span style="font-weight: bold;">Useful to the widest range of developers</span><br /></span>Very few indie developers want to spend time figuring out how to use a set of graphics for their prototype.  Often a developer would rather build their own format specific to their design and hire some to make graphics to spec or horrendously mangle free graphics to fit their needs.  For completely original graphics, MS Paint in all its heavenly glory, is a extremely popular choice.<br /><br />Some of the fault lies with the existing graphics, be they free sets scrounged from the internet or leftovers from a previous project. 3D graphics are notoriously difficult to convert between formats, are optimized for use on a specific platform and often present a confusing technological challenges to student developers.  What coordinate system are they in?  How are they grouped?  How are they animated?  Perhaps Collada will make it all seamless one day, but we aren't there yet.<br /><br />Even 2D graphics are tricky.  I've seen a simple system like auto-tile confuse new developers.   There is typically a whole class of rules associated with any set of 2D graphics.  What pieces go together?  What is the render order?  A set of a hundred graphics presents a puzzle that surprisingly few are willing to decipher.<br /><br />The PlanetCute set attempts to wiggle past many of those problems.<br /><ul><li><span style="font-weight: bold;">Building blocks, not tilesets</span>:  Instead of having complex tilesets, each block stacks nicely with pretty much any other block.  If you can understand Legos, you can understand how to put together these graphics.  These tiles should be useful to children, not just uber-elite game gods.<br /></li><li><span style="font-weight: bold;">Standardized format:</span> All the graphics are uniform sized PNGs.    The graphics will also work in almost any graphics engine out there that can do 2D sprites. Once you get your offsets right once, you never have to change them again.</li><li><span style="font-weight: bold;">Source files included</span>:  If you do need to make changes, I've included the source files.  If you really need to change a color, go for it.  If you need a big gem, just scale up the original.  Everything is a vector so you'll alway end up with clean results.<br /></li></ul><span style=";font-family:arial;font-size:130%;"  ><span style="font-weight: bold;">Useful to the widest range of genres</span></span><br />These terrestrial tiles that be used to prototype a shockingly wide spread of popular 2D genres. Some that come to mind include:<br /><ul><li>Console RPG</li><li>Platformer</li><li>2D brawler</li><li>Pacman</li><li>Sokoban (Please don't make this game again)<br /></li><li>Match-3</li><li>Populous</li><li>Syndicate</li><li>Pong</li><li>Arkanoid</li><li>Marble Madness<br /></li></ul>I imagined that a basic engine that can deal with stacking blocks and a bit of collision detection could be easily adapted to new game types as desired.<br /><br />This set is also quite amendable to original games.  What could you make with destructible terrain, crowd AI and ancient treasures hidden several layers deep in the earth? I don't know, but I suspect it would be a heck of a lot more interesting than yet another Match-3 game. :-)  And this set can handle all those technologies with delightfully low-fi aplomb.<br /><br /><span style=";font-family:arial;font-size:130%;"  ><span style="font-weight: bold;">Why does the world need nice graphics for prototyping?</span></span><br />The whole goal is to get you to focus on building up your game mechanics, not on polishing your graphics engine.<br /><br />Many developers are driven to improve their graphics.  There is a common moment that is seared into most developers brains.  Do your remember that time you were working on a new idea for days, perhaps weeks.  Finally you showed it to your friend. Your code was tight. The idea amazing.  Yet your friend took one look at the command line interface and the rectangular graphics and his eyes glazed over.  He was bored before you even complete your first sentence.  That moment can be devastating.<br /><br />For the follow up, you spent half your time making your prototype pretty.  Unfortunately, to be overly blunt, you suck at drawing.  You spent untold hours on something that didn't quite meet your vision.  As a result, you didn't get a chance to polish and balance the game mechanics. You know...the part that makes a game fun. There is only so much time in your day and you wasted a good chunk of it on getting past that first 15 second impression.<br /><br />The next time you make a prototype, use these graphics.  If you can reduce the time you spend on futzing with graphics from 40% to 5%, you can put more time into those fun game mechanics you've been dreaming about.  The magic is that your graphics will now look good enough to get you through the first 15 seconds of your demo.  Your friend will perk up and stay engaged long enough to give you feedback all the wonderful work that you've put into your prototype.<br /><br />Let me know if there is anything major missing.   These were surprisingly fun to draw.<br /><br />take care,<br />Danc<br /><br /><span style=";font-family:arial;font-size:130%;"  ><span style="font-weight: bold;">Download 'em here</span></span><br /><span style="font-weight: bold;">Vectors</span>: Ideal for Silverlight or WPF experimentation<br /><ul><li><span style="font-weight: bold;">File</span>: <a href="http://lostgarden.com/PlanetCute.design">PlanetCute.design</a><span class="fullpost"> (401k) </span></li><li><span style="font-weight: bold;">Expression Design for editing .design files:</span> <a href="http://www.microsoft.com/Expression/products/download.aspx?key=design">http://www.microsoft.com/Expression/products/download.aspx?key=design</a></li><li><span style="font-weight: bold;">XAML file for Silverlight:</span> <a href="http://lostgarden.com/PlanetCute.xaml">PlanetCute.xaml</a><span class="fullpost"><span> (1178k) </span></span></li></ul><span class="fullpost"><span style="font-weight: bold;">Bitmap</span>: Good for that vast world of pixel engines</span></span><span class="fullpost"><ul><li><a href="http://lostgarden.com/PlanetCute%20PNG.zip">PlanetCute%20PNG.zip</a> (273k)<br /></li></ul></span>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'><span class='post-author vcard'>
+Posted by
+<span class='fn'>Daniel Cook</span>
+</span>
+<span class='post-timestamp'>
+at
+<a class='timestamp-link' href='http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html' rel='bookmark' title='permanent link'><abbr class='published' title='2007-05-12T16:53:00-07:00'>4:53 PM</abbr></a>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-action'>
+<a href='https://www.blogger.com/email-post.g?blogID=11719805&postID=4097888096877574222' title='Email Post'>
+<img alt='' class='icon-action' height='13' src='http://img1.blogblog.com/img/icon18_email.gif' width='18'/>
+</a>
+</span>
+<span class='item-control blog-admin pid-1904044448'>
+<a href='https://www.blogger.com/post-edit.g?blogID=11719805&postID=4097888096877574222&from=pencil' title='Edit Post'>
+<img alt='' class='icon-action' height='18' src='//img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+<span class='post-backlinks post-comment-link'>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-2'><span class='post-labels'>
+Labels:
+<a href='http://www.lostgarden.com/search/label/All' rel='tag'>All</a>,
+<a href='http://www.lostgarden.com/search/label/CuteGod' rel='tag'>CuteGod</a>,
+<a href='http://www.lostgarden.com/search/label/free%20game%20graphics' rel='tag'>free game graphics</a>,
+<a href='http://www.lostgarden.com/search/label/Silverlight' rel='tag'>Silverlight</a>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'><span class='reaction-buttons'>
+</span>
+</div>
+</div>
+</div>
+<script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+<div class='cmt_iframe_holder' data-href='http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html' data-viewtype='FILTERED_POSTMOD'></div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='http://www.lostgarden.com/2007/05/circle-of-life-analysis-of-game-product.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='http://www.lostgarden.com/2007/05/silverlight-and-expression-thoughts.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</a>
+</span>
+<a class='home-link' href='http://www.lostgarden.com/'>Home</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+<div class='feed-links'>
+Subscribe to:
+<a class='feed-link' href='http://www.lostgarden.com/feeds/4097888096877574222/comments/default' target='_blank' type='application/atom+xml'>Post Comments (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};</script>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div class='sidebar section' id='sidebar'><div class='widget HTML' id='HTML2'>
+<h2 class='title'>You should follow Lostgarden</h2>
+<div class='widget-content'>
+<a href="http://twitter.com/danctheduck"><img src="http://2.bp.blogspot.com/_np-ZSCVhPQ0/TIlj309f3XI/AAAAAAAAACk/wnr_DecHnYg/S330/twitter.png" /></a>
+ &nbsp; &nbsp; &nbsp; 
+<a href="http://feeds.feedburner.com/LostGarden"><img src="http://3.bp.blogspot.com/_np-ZSCVhPQ0/TIkvlobtbiI/AAAAAAAAACU/uAZ69tdxqIM/S330/rss-icon+64x64.png" /></a>
+<br />&nbsp;
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target='configHTML2' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Text' id='Text1'>
+<h2 class='title'>Welcome!</h2>
+<div class='widget-content'>
+You've found a rare treasure trove of readable, thoughtful essays on game design theory, art and the business of design.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Text&widgetId=Text1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Text1"));' target='configText1' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Text' id='Text2'>
+<h2 class='title'>Why people read this blog</h2>
+<div class='widget-content'>
+"[...] probably the most interesting article I've ever read." Tycho from Penny Arcade<br /><br /><a href="http://www.lostgarden.com/2005/09/nintendos-genre-innovation-strategy.html">Nintendo Innovation Strategy</a><br /><a href="http://lunar.lostgarden.com/labels/Worth%20Reading.html">Other articles worth reading</a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Text&widgetId=Text2&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Text2"));' target='configText2' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Profile' id='Profile1'>
+<h2>About Me</h2>
+<div class='widget-content'>
+<a href='https://plus.google.com/105363132599081141035'><img alt='My Photo' class='profile-img' height='80' src='//lh5.googleusercontent.com/-2Kpk1o55lKY/AAAAAAAAAAI/AAAAAAAAA10/Zt8ooDlw0bQ/s80-c/photo.jpg' width='80'/></a>
+<dl class='profile-datablock'>
+<dt class='profile-data'>
+<a class='profile-name-link g-profile' href='https://plus.google.com/105363132599081141035' rel='author' style='background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);'>
+Daniel Cook
+</a>
+<br/>
+<div class='g-follow' data-annotation='bubble' data-height='20' data-href='https://plus.google.com/105363132599081141035'></div>
+</dt>
+<dd class='profile-textblock'><span>I&#39;ve been a game designer, pixel artist, toolmaker, physicist and MBA. My first job in college was on a game called Tyrian at a tiny company called Epic Megagames. These days, I&#39;m the Chief Creative Officer at&#160;<a href="http://www.spryfox.com/">Spry Fox.</a><br></span></dd>
+</dl>
+<a class='profile-link' href='https://plus.google.com/105363132599081141035' rel='author'>View my complete profile</a>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target='configProfile1' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Image' id='Image2'>
+<h2>Illustrations</h2>
+<div class='widget-content'>
+<a href='http://lunar.lostgarden.com/gallery.htm'>
+<img alt='Illustrations' height='129' id='Image2_img' src='http://3.bp.blogspot.com/_VzXlmJG8Y3Q/S-XupN-b4wI/AAAAAAAAAKU/JsmXDU31HJk/S270/plucked-03.png' width='268'/>
+</a>
+<br/>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Image&widgetId=Image2&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Image2"));' target='configImage2' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Label' id='Label1'>
+<h2>Categories</h2>
+<div class='widget-content cloud-label-widget-content'>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/prototyping%20challenge'>prototyping challenge</a>
+</span>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/business'>business</a>
+</span>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/art'>art</a>
+</span>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/SpaceCrack'>SpaceCrack</a>
+</span>
+<span class='label-size label-size-5'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/science%20of%20game%20design'>science of game design</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/game%20design'>game design</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/personal'>personal</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/agile'>agile</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/cost%20effective%20game%20design'>cost effective game design</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/free%20game%20graphics'>free game graphics</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/indie'>indie</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/skill%20chains'>skill chains</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Project%20Horseshoe'>Project Horseshoe</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Worth%20Reading'>Worth Reading</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/crazy%20idea'>crazy idea</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/game%20design%20review'>game design review</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/game%20genres'>game genres</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/gdc'>gdc</a>
+</span>
+<span class='label-size label-size-4'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/software'>software</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/online%20games'>online games</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/prototyping%20techniques'>prototyping techniques</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/SpaceCute'>SpaceCute</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/game%20applications'>game applications</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/links'>links</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/story'>story</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Gamasutra'>Gamasutra</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/MMORPG'>MMORPG</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Serious%20Games'>Serious Games</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/interaction%20design'>interaction design</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/new%20product%20development'>new product development</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Lost%20Garden'>Lost Garden</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Multiplayer'>Multiplayer</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Steambirds'>Steambirds</a>
+</span>
+<span class='label-size label-size-3'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/best%20practices'>best practices</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/CuteGod'>CuteGod</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Flash'>Flash</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/LackOfReflexes'>LackOfReflexes</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Silverlight'>Silverlight</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Tree%20story'>Tree story</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/book%20review'>book review</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/oekaki'>oekaki</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Expression%20Design'>Expression Design</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/FishingGirl'>FishingGirl</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Flash%20Love%20Letter'>Flash Love Letter</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Japan'>Japan</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/PlayWithYourPeas'>PlayWithYourPeas</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Secret%20Life%20of%20Aliens'>Secret Life of Aliens</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Tyrian'>Tyrian</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/casual%20games'>casual games</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/customer%20feedback'>customer feedback</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/data%20driven%20game%20design'>data driven game design</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/design'>design</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/layers%20of%20mastery'>layers of mastery</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/morality'>morality</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/play%20styles'>play styles</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/playground%20games'>playground games</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/product%20design'>product design</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/shade'>shade</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/stage%20gate'>stage gate</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/test%20driven%20design'>test driven design</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/touring%20band'>touring band</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/valentine'>valentine</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/value%20of%20games'>value of games</a>
+</span>
+<span class='label-size label-size-2'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/work%20life%20balance'>work life balance</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Cooperation%20War'>Cooperation War</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/DS'>DS</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/E3'>E3</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/FlashForward'>FlashForward</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/License'>License</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Mystery%20Project'>Mystery Project</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/User%20Pain'>User Pain</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/Wii'>Wii</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/artificial%20emotions'>artificial emotions</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/avatars'>avatars</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/bunni'>bunni</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/celestial%20music'>celestial music</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/government'>government</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/help%20wanted'>help wanted</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/localization'>localization</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/magic%20gardens'>magic gardens</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/magic%20paintbrush'>magic paintbrush</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/pixel%20art'>pixel art</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/podcasts'>podcasts</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/psp'>psp</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/sharing%20game%20designs'>sharing game designs</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/sprawl'>sprawl</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/testosterone'>testosterone</a>
+</span>
+<span class='label-size label-size-1'>
+<a dir='ltr' href='http://www.lostgarden.com/search/label/user%20generated%20content'>user generated content</a>
+</span>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target='configLabel1' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget BlogArchive' id='BlogArchive1'>
+<h2>Blog Archive</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2015-01-01T00:00:00-08:00&amp;updated-max=2016-01-01T00:00:00-08:00&amp;max-results=1'>
+2015
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2015_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2014-01-01T00:00:00-08:00&amp;updated-max=2015-01-01T00:00:00-08:00&amp;max-results=3'>
+2014
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2014_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2014_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2013-01-01T00:00:00-08:00&amp;updated-max=2014-01-01T00:00:00-08:00&amp;max-results=4'>
+2013
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2013_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2013_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2013_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2012-01-01T00:00:00-08:00&amp;updated-max=2013-01-01T00:00:00-08:00&amp;max-results=9'>
+2012
+</a>
+<span class='post-count' dir='ltr'>(9)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2012_01_01_archive.html'>
+January
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2011-01-01T00:00:00-08:00&amp;updated-max=2012-01-01T00:00:00-08:00&amp;max-results=12'>
+2011
+</a>
+<span class='post-count' dir='ltr'>(12)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2011_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2010-01-01T00:00:00-08:00&amp;updated-max=2011-01-01T00:00:00-08:00&amp;max-results=14'>
+2010
+</a>
+<span class='post-count' dir='ltr'>(14)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2010_01_01_archive.html'>
+January
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2009-01-01T00:00:00-08:00&amp;updated-max=2010-01-01T00:00:00-08:00&amp;max-results=17'>
+2009
+</a>
+<span class='post-count' dir='ltr'>(17)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2009_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2008-01-01T00:00:00-08:00&amp;updated-max=2009-01-01T00:00:00-08:00&amp;max-results=25'>
+2008
+</a>
+<span class='post-count' dir='ltr'>(25)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2008_01_01_archive.html'>
+January
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2007-01-01T00:00:00-08:00&amp;updated-max=2008-01-01T00:00:00-08:00&amp;max-results=40'>
+2007
+</a>
+<span class='post-count' dir='ltr'>(40)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(5)</span>
+<ul class='posts'>
+<li><a href='http://www.lostgarden.com/2007/05/cutegod-prototyping-challenge.html'>CuteGod: A prototyping challenge</a></li>
+<li><a href='http://www.lostgarden.com/2007/05/initial-planetcute-level-editor.html'>Initial PlanetCute level editor</a></li>
+<li><a href='http://www.lostgarden.com/2007/05/circle-of-life-analysis-of-game-product.html'>The Circle of Life: An Analysis of the Game Produc...</a></li>
+<li><a href='http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html'>Danc&#39;s Miraculously Flexible Game Prototyping Tile...</a></li>
+<li><a href='http://www.lostgarden.com/2007/05/silverlight-and-expression-thoughts.html'>Thoughts on Silverlight, Expression and Games</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2007_01_01_archive.html'>
+January
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2006-01-01T00:00:00-08:00&amp;updated-max=2007-01-01T00:00:00-08:00&amp;max-results=46'>
+2006
+</a>
+<span class='post-count' dir='ltr'>(46)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_02_01_archive.html'>
+February
+</a>
+<span class='post-count' dir='ltr'>(5)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2006_01_01_archive.html'>
+January
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/search?updated-min=2005-01-01T00:00:00-08:00&amp;updated-max=2006-01-01T00:00:00-08:00&amp;max-results=50'>
+2005
+</a>
+<span class='post-count' dir='ltr'>(85)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_12_01_archive.html'>
+December
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_11_01_archive.html'>
+November
+</a>
+<span class='post-count' dir='ltr'>(5)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_10_01_archive.html'>
+October
+</a>
+<span class='post-count' dir='ltr'>(8)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_09_01_archive.html'>
+September
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_08_01_archive.html'>
+August
+</a>
+<span class='post-count' dir='ltr'>(11)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_07_01_archive.html'>
+July
+</a>
+<span class='post-count' dir='ltr'>(13)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_06_01_archive.html'>
+June
+</a>
+<span class='post-count' dir='ltr'>(17)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_05_01_archive.html'>
+May
+</a>
+<span class='post-count' dir='ltr'>(12)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_04_01_archive.html'>
+April
+</a>
+<span class='post-count' dir='ltr'>(6)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='http://www.lostgarden.com/2005_03_01_archive.html'>
+March
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Followers' id='Followers1'>
+<h2 class='title'>Followers</h2>
+<div class='widget-content'>
+<div id='Followers1-wrapper'>
+<div style='margin-right:2px;'>
+<script type="text/javascript">
+        if (!window.google || !google.friendconnect) {
+          document.write('<script type="text/javascript"' +
+              'src="//www.google.com/friendconnect/script/friendconnect.js">' +
+              '</scr' + 'ipt>');
+        }
+      </script>
+<script type="text/javascript">
+      if (!window.registeredBloggerCallbacks) {
+        window.registeredBloggerCallbacks = true;
+
+        
+
+        
+        gadgets.rpc.register('requestReload', function() {
+          document.location.reload();
+        });
+
+        
+        gadgets.rpc.register('requestSignOut', function(siteId) {
+          
+          google.friendconnect.container.openSocialSiteId = siteId;
+          google.friendconnect.requestSignOut();
+        });
+      }
+    </script>
+<script type="text/javascript">
+    
+    function registerGetBlogUrls() {
+      gadgets.rpc.register('getBlogUrls', function() {
+        var holder = {};
+        
+          
+            
+            
+              holder.currentPost = "https://www.blogger.com/feeds/11719805/posts/default/4097888096877574222";
+            
+            
+            
+              holder.currentComments = "https://www.blogger.com/feeds/11719805/4097888096877574222/comments/default";
+            
+            holder.currentPostUrl = "";
+            holder.currentPostId = 4097888096877574222
+          
+          
+          
+            holder.postFeed = "https://www.blogger.com/feeds/11719805/posts/default";
+          
+          
+          
+            holder.commentFeed = "https://www.blogger.com/feeds/11719805/comments/default";
+          
+          holder.currentBlogUrl = "http://www.lostgarden.com/";
+          holder.currentBlogId = "11719805";
+        
+        return holder;
+      });
+    }
+  </script>
+<script type="text/javascript">
+  if (!window.registeredCommonBloggerCallbacks) {
+    window.registeredCommonBloggerCallbacks = true;
+
+    gadgets.rpc.register('resize_iframe', function(height) {
+      var el = document.getElementById(this['f']);
+      if (el) {
+        el.style.height = height + 'px';
+      }
+    });
+
+    
+    gadgets.rpc.register('set_pref', function() {});
+
+    registerGetBlogUrls();
+  }
+  </script>
+<div id="div-4pt5irap59pb" style="width: 100%; "></div>
+<script type="text/javascript">
+    var skin = {};
+    skin['FACE_SIZE'] = '32';
+    skin['HEIGHT'] = "260";
+    skin['BORDER_COLOR'] = "transparent";
+    skin['ENDCAP_BG_COLOR'] = "transparent";
+    skin['ENDCAP_TEXT_COLOR'] = "#666666";
+    skin['ENDCAP_LINK_COLOR'] = "#5588aa";
+    
+    skin['CONTENT_BG_COLOR'] = "transparent";
+    skin['CONTENT_LINK_COLOR'] = "#5588aa";
+    skin['CONTENT_TEXT_COLOR'] = "#666666";
+    skin['CONTENT_SECONDARY_LINK_COLOR'] = "#5588aa";
+    skin['CONTENT_SECONDARY_TEXT_COLOR'] = "#999999";
+    skin['CONTENT_HEADLINE_COLOR'] = "#cc6600";
+    google.friendconnect.container.setParentUrl("/");
+    google.friendconnect.container["renderMembersGadget"](
+    {id: "div-4pt5irap59pb",
+     height: 260,
+     
+     
+     
+     site: "06267800285551676435",
+     locale: 'en' },
+     skin);
+  </script>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=11719805&widgetType=Followers&widgetId=Followers1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Followers1"));' target='configFollowers1' title='Edit'>
+<img alt='' height='18' src='//img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+<div class='rss'><a href='http://feeds.feedburner.com/LostGarden'><img alt='rss' border='0' src='http://3.bp.blogspot.com/_66wIGDjagHk/SgXqBLiHVJI/AAAAAAAAAVw/ACNXTOJP-HY/s1600/rss3.png'/></a>
+</div>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class='clear'>&#160;</div>
+</div>
+<!-- end content-wrapper -->
+</div></div>
+<!-- end outer-wrapper -->
+<div id='footer-wrapper'>
+<p>Copyright &#169; 2009 <a href='http://www.lostgarden.com/'>Lost Garden
+</a>. Blog Designed by <a href='http://www.dantearaujo.net'>Dante Araujo</a> & <a href='http://www.deluxetemplates.net'>Klodian</a>.</p>
+</div>
+<script type='text/javascript'>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type='text/javascript'>
+try {
+var pageTracker = _gat._getTracker("UA-600873-1");
+pageTracker._setDomainName(".lostgarden.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script>
+
+<!-- 'Es liegt in deiner Verantwortung, deine Besucher über die in deinem Blog verwendeten Cookies zu informieren. Weitere Informationen findest du hier http://www.blogger.com/go/cookiechoices.' -->
+<script src="/js/cookiechoices.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+        (window.cookieOptions && cookieOptions.msg) || 'Diese Website verwendet Cookies von Google, um ihre Dienste bereitzustellen, Anzeigen zu personalisieren und Zugriffe zu analysieren. Informationen darüber, wie du die Website verwendest, werden an Google weitergegeben. Durch die Nutzung dieser Website erklärst du dich damit einverstanden, dass sie Cookies verwendet.',
+        (window.cookieOptions && cookieOptions.close) || 'OK',
+        (window.cookieOptions && cookieOptions.learn) || 'Weitere Informationen',
+        (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+  });
+</script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/278981662-widgets.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '11719805';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d11719805','//www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html','11719805');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '11719805', 'bloggerUrl': 'https://www.blogger.com', 'title': 'Lost Garden', 'pageType': 'item', 'postId': '4097888096877574222', 'url': 'http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html', 'canonicalUrl': 'http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html', 'homepageUrl': 'http://www.lostgarden.com/', 'canonicalHomepageUrl': 'http://www.lostgarden.com/', 'blogspotFaviconUrl': 'http://www.lostgarden.com/favicon.ico', 'enabledCommentProfileImages': false, 'adultContent': false, 'analyticsAccountNumber': '', 'useUniversalAnalytics': false, 'pageName': 'Danc\47s Miraculously Flexible Game Prototyping Tiles', 'pageTitle': 'Lost Garden: Danc\47s Miraculously Flexible Game Prototyping Tiles', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Lost Garden - Atom\42 href\75\42http://www.lostgarden.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Lost Garden - RSS\42 href\75\42http://www.lostgarden.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Lost Garden - Atom\42 href\75\42https://www.blogger.com/feeds/11719805/posts/default\42 /\76\n\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Lost Garden - Atom\42 href\75\42http://www.lostgarden.com/feeds/4097888096877574222/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'googleProfileUrl': 'https://plus.google.com/105363132599081141035', 'postImageUrl': 'http://lostgarden.com/uploaded_images/BlockRPGMockup-772325.jpg', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { (function(){function c(a){this.t\75{};this.tick\75function(a,c,b){var d\75void 0!\75b?b:(new Date).getTime();this.t[a]\75[d,c];if(void 0\75\75b)try{window.console.timeStamp(\42CSI/\42+a)}catch(e){}};this.tick(\42start\42,null,a)}var a;window.performance\46\46(a\75window.performance.timing);var h\75a?new c(a.responseStart):new c;window.jstiming\75{Timer:c,load:h};if(a){var b\75a.navigationStart,e\75a.responseStart;0\74b\46\46e\76\75b\46\46(window.jstiming.srt\75e-b)}if(a){var d\75window.jstiming.load;0\74b\46\46e\76\75b\46\46(d.tick(\42_wtsrt\42,void 0,b),d.tick(\42wtsrt_\42,\n\42_wtsrt\42,e),d.tick(\42tbsd_\42,\42wtsrt_\42))}try{a\75null,window.chrome\46\46window.chrome.csi\46\46(a\75Math.floor(window.chrome.csi().pageT),d\46\0460\74b\46\46(d.tick(\42_tbnd\42,void 0,window.chrome.csi().startE),d.tick(\42tbnd_\42,\42_tbnd\42,b))),null\75\75a\46\46window.gtbExternal\46\46(a\75window.gtbExternal.pageT()),null\75\75a\46\46window.external\46\46(a\75window.external.pageT,d\46\0460\74b\46\46(d.tick(\42_tbnd\42,void 0,window.external.startE),d.tick(\42tbnd_\42,\42_tbnd\42,b))),a\46\46(window.jstiming.pt\75a)}catch(k){}})();window.tickAboveFold\75function(c){var a\0750;if(c.offsetParent){do a+\75c.offsetTop;while(c\75c.offsetParent)}c\75a;750\76\75c\46\46window.jstiming.load.tick(\42aft\42)};var f\75!1;function g(){f||(f\75!0,window.jstiming.load.tick(\42firstScrollTime\42))}window.addEventListener?window.addEventListener(\42scroll\42,g,!1):window.attachEvent(\42onscroll\42,g);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/57b76c2f28d7ea5b', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n', 'tf': ''}}, {'name': 'messages', 'data': {'archive': 'Archive', 'deleteBacklink': 'Delete Backlink', 'deleteComment': 'Delete Comment', 'emailAddress': 'Email Address', 'getEmailNotifications': 'Get email notifications', 'keepReading': 'Keep reading', 'labels': 'Labels', 'loadMorePosts': 'Load more posts', 'loading': 'Loading...', 'myBlogList': 'My Blog List', 'myFavoriteSites': 'My favorite sites', 'newer': 'Newer', 'newerPosts': 'Newer Posts', 'newest': 'Newest', 'noResultsFound': 'No results found', 'noTitle': 'No title', 'older': 'Older', 'olderPosts': 'Older Posts', 'oldest': 'Oldest', 'onlyTeamMembersCanComment': 'Note: Only a member of this blog may post a comment.', 'popularPosts': 'Popular Posts', 'popularPostsFromThisBlog': 'Popular posts from this blog', 'postAComment': 'Post a Comment', 'reportAbuse': 'Report Abuse', 'search': 'Search', 'share': 'Share', 'showAll': 'Show all', 'subscribe': 'Subscribe', 'subscribeToThisBlog': 'Subscribe to this blog', 'theresNothingHere': 'There\47s nothing here!'}}, {'name': 'skin', 'data': {'vars': {'descriptionfont': 'normal normal 78% \47Trebuchet MS\47, Trebuchet, Arial, Verdana, Sans-serif', 'endSide': 'right', 'pagetitlefont': 'normal normal 200% Georgia, Serif', 'textcolor': '#333333', 'titlecolor': '#cc6600', 'linkcolor': '#5588aa', 'startSide': 'left', 'sidebarcolor': '#999999', 'bordercolor': '#cccccc', 'sidebartextcolor': '#666666', 'postfooterfont': 'normal normal 78% \47Trebuchet MS\47, Trebuchet, Arial, Verdana, Sans-serif', 'bgcolor': '#ffffff', 'bodyfont': 'normal normal 100% Georgia, Serif', 'visitedlinkcolor': '#999999', 'descriptioncolor': '#999999', 'headerfont': 'normal normal 78% \47Trebuchet MS\47,Trebuchet,Arial,Verdana,Sans-serif', 'pagetitlecolor': '#ffffff'}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'showBacklinks': true, 'postId': '4097888096877574222', 'legacyCommentModerationUrl': 'https://www.blogger.com/moderate-legacy-comment.g?blogID\07511719805', 'iframeCommentsId': 'gpluscomments', 'viewType': 'FILTERED_POSTMOD', 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/4156661259-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/1185134592-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_TextView', new _WidgetInfo('Text1', 'sidebar', null, document.getElementById('Text1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_TextView', new _WidgetInfo('Text2', 'sidebar', null, document.getElementById('Text2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image2', 'sidebar', null, document.getElementById('Image2'), {'resize': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Loading...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FollowersView', new _WidgetInfo('Followers1', 'sidebar', null, document.getElementById('Followers1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>
