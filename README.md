@@ -1,4 +1,6 @@
-image:https://travis-ci.org/swatteau/sokoban-rs.svg["Build Status", link="https://travis-ci.org/swatteau/sokoban-rs"]
+//
+
+ [![Build Status](https://travis-ci.org/robisys/sokoban-rs.svg)](https://travis-ci.org/robisys/sokoban-rs)
 
 // This file is part of sokoban-rs
 // Copyright 2015 Sébastien Watteau
