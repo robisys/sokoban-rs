@@ -3,6 +3,9 @@ rust:
   - stable
   
 
-scripts:
+script:
   - cargo build
+  
+after_success:
+   "echo 'success'  "
   
