@@ -42,14 +42,23 @@ pub mod render;
 use game::Level;
 use render::Drawer;
 
+///  # Sokoban  Main funktion
+///
+///  * aufruf
+///
+///  Inhalt
+///
 pub fn main() {
+//! load_yaml!
+//!
     let yml = load_yaml!("clap.yml");
     let matches = App::from_yaml(yml).get_matches();
 
     let slc_file = matches.value_of("slc_file").unwrap();
     let width = value_t!(matches.value_of("width"), u32).unwrap_or(1024);
     let height = value_t!(matches.value_of("height"), u32).unwrap_or(768);
-
+//  panic!
+//
     let sdl_context = sdl2::init().unwrap_or_else(|err| {
         panic!("Failed to initialize an SDL context: {}", err)
     });
